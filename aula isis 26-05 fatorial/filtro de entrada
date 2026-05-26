@@ -1,0 +1,19 @@
+function filtrodeentrada(pet) {
+    if (pet.nome === "") {
+        return  "Erro 400";
+    }
+    
+    if (pet.idade > 20  || pet.idade < 0) {
+        return  "Erro 400";
+    } 
+
+    if (pet.especie === "gato" && vip === false)  {
+        return  "Erro 400";
+    }
+    
+     return "Sucesso 201";
+}
+  console.log(filtropetfriendly("Max",5,"cachorro",true ));
+  console.log(filtropetfriendly("Mime",1,"gato",true ));
+  console.log(filtropetfriendly("Dino",0,"cachorro",false ));
+  console.log(filtropetfriendly("",1,"gato",false ));
